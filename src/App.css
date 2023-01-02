@@ -1,0 +1,17 @@
+.App {
+  /* border: 2px solid black; */
+  padding: 2rem;
+  overflow: hidden;
+}
+.title {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-align: center;
+  color: #686868;
+}
+.map {
+  border: none;
+  border-radius: 5px;
+}

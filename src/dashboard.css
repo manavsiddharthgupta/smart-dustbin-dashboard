@@ -1,0 +1,112 @@
+.box {
+  /* border: 1px solid black; */
+}
+.box ul {
+  display: flex;
+  margin-left: 0.5rem;
+  width: fit-content;
+  border-top: 0.25px solid rgb(202, 201, 201);
+  border-bottom: 0.25px solid rgb(202, 201, 201);
+  border-left: 0.25px solid rgb(202, 201, 201);
+}
+.box ul li {
+  list-style: none;
+  border-right: 0.25px solid rgb(202, 201, 201);
+  padding: 0.4em 1em;
+  font-size: small;
+  font-weight: 600;
+  cursor: pointer;
+}
+.box ul li:hover {
+  background-color: #2cbc63;
+  color: white;
+}
+.active {
+  font-weight: 600;
+  background-color: #2cbc63;
+  color: white;
+}
+.allCharts {
+  /* border: 1px solid black; */
+  width: fit-content;
+}
+.gaugecharts {
+  /* border: 1px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  width: 380px;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+.gaugecharts h1 {
+  color: #232323;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.gaugecharts h1 p {
+  display: inline;
+  color: #565656;
+  font-size: 1em;
+  font-weight: 200;
+}
+.chart_2 {
+  /* border: 1px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  width: 380px;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.chart_2 h1 {
+  color: #232323;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.chart_2 h1 p {
+  display: inline;
+  color: #565656;
+  font-size: 1em;
+  font-weight: 200;
+}
+.chart_2 p {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+  font-size: 5rem;
+  font-weight: 200;
+  color: #6f6e72;
+}
+.outer_1 {
+  display: flex;
+}
+.outer_2 {
+  display: flex;
+}
+.lineChart {
+  /* border: 1px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.lineChart h1 {
+  color: #565656;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.outerChart {
+  display: flex;
+}
+.outer_map {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem 1rem;
+  margin: 0.5rem 0rem;
+  border-radius: 15px;
+}
+.outer_map h1 {
+  color: #232323;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
+}
