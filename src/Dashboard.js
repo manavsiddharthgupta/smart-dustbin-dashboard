@@ -7,10 +7,11 @@ import Map from "./components/Map";
 import { data, FetchFun } from "./data/data";
 import CoverageComponent from "./components/CoverageComponent";
 const Dashboard = () => {
-  const [selectCoverage, setCoverage] = useState("last_Hour");
-  const [coverName, setCoverName] = useState("Last Hour");
+  const [selectCoverage, setCoverage] = useState("latest");
+  const [coverName, setCoverName] = useState("Latest");
   FetchFun();
   const allCov = [
+    "Latest",
     "Last Hour",
     "Six Hour",
     "One Day",
@@ -22,8 +23,15 @@ const Dashboard = () => {
   const onSetCoverage = (event) => {
     console.log(event.target.innerHTML);
     const innerhtml = event.target.innerHTML;
-    const tempcov = innerhtml.split(" ");
-    const coverageName = `${tempcov[0].toLowerCase()}_${tempcov[1]}`;
+    let coverageName = "";
+    console.log();
+    if (innerhtml === "Latest") {
+      coverageName = innerhtml.toLowerCase();
+    } else {
+      const tempcov = innerhtml.split(" ");
+      coverageName = `${tempcov[0].toLowerCase()}_${tempcov[1]}`;
+    }
+
     console.log(coverageName);
     setCoverage(coverageName);
     setCoverName(innerhtml);
