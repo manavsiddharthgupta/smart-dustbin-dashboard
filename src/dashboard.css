@@ -28,13 +28,14 @@
 }
 .allCharts {
   /* border: 1px solid black; */
-  width: fit-content;
+  width: 100%;
 }
 .gaugecharts {
   /* border: 1px solid black; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
   width: 380px;
+  min-width: 100px;
   margin: 0.5rem;
   padding: 1rem;
 }
@@ -54,6 +55,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
   width: 380px;
+  min-width: 100px;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -87,6 +89,7 @@
   border-radius: 15px;
   padding: 1rem;
   margin: 0.5rem;
+  min-width: 100px;
 }
 .lineChart h1 {
   color: #565656;
@@ -101,7 +104,7 @@
   width: 100%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 1rem 1rem;
-  margin: 0.5rem 0rem;
+  margin: 0.5rem 0rem 0.5rem 0.5rem;
   border-radius: 15px;
 }
 .outer_map h1 {
@@ -109,4 +112,45 @@
   margin-bottom: 0.5em;
   font-size: 1.2em;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 1120px) {
+  .outerChart {
+    flex-wrap: wrap;
+  }
+  .outer_map {
+    width: 100%;
+    border-radius: 15px;
+    height: 500px;
+  }
+  .outer_1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .outer_2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .lineChart {
+    padding: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  .box ul {
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    /* border-top: 0.25px solid rgb(202, 201, 201);
+    border-bottom: 0.25px solid rgb(202, 201, 201);
+    border-left: 0.25px solid rgb(202, 201, 201);
+    border-right: 0.25px solid rgb(202, 201, 201); */
+    border: none;
+  }
+  .box ul li {
+    list-style: none;
+    border-right: 0.25px solid rgb(202, 201, 201);
+    border-top: 0.25px solid rgb(202, 201, 201);
+    border-bottom: 0.25px solid rgb(202, 201, 201);
+    border-left: 0.25px solid rgb(202, 201, 201);
+  }
 }
