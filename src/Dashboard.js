@@ -197,11 +197,16 @@ const Dashboard = () => {
   }, [historyData]);
 
   useEffect(() => {
-    if (latestData.latest.v0 >= 30) {
+    if (latestData.latest.v0 >= 20) {
       console.log("hello");
-      fetch("http://127.0.0.1:4000/send-text").catch((err) =>
-        console.error(err)
-      );
+      // https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text
+      fetch(
+        "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
+      )
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => console.error(err));
     }
   }, [latestData]);
 
