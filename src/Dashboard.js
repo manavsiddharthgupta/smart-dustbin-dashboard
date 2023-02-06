@@ -6,7 +6,7 @@ import LineComponent from "./components/LineComponent";
 import Map from "./components/Map";
 import { data } from "./data/data";
 import CoverageComponent from "./components/CoverageComponent";
-import OneSignal from "react-onesignal";
+// import OneSignal from "react-onesignal";
 
 const Dashboard = () => {
   const [selectCoverage, setCoverage] = useState("latest");
@@ -199,6 +199,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (latestData.latest.v0 >= 90) {
+      console.log("hello");
       fetch(
         "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
       )
