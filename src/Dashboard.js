@@ -198,7 +198,7 @@ const Dashboard = () => {
   }, [historyData]);
 
   useEffect(() => {
-    if (latestData.latest.v0 >= 90) {
+    if (latestData.latest.v0 >= 60) {
       console.log("hello");
       fetch(
         "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
