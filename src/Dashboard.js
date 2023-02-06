@@ -196,6 +196,15 @@ const Dashboard = () => {
     transform();
   }, [historyData]);
 
+  useEffect(() => {
+    if (latestData.latest.v0 >= 30) {
+      console.log("hello");
+      fetch("http://127.0.0.1:4000/send-text").catch((err) =>
+        console.error(err)
+      );
+    }
+  }, [latestData]);
+
   const allCov = [
     "Latest",
     "Last Hour",
