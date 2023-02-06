@@ -201,9 +201,13 @@ const Dashboard = () => {
     if (latestData.latest.v0 >= 10) {
       fetch(
         "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
-      ).then((res) => {
-        console.log(res.json);
-      });
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+        });
     }
   }, [latestData]);
 
