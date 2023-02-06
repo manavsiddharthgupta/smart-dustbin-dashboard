@@ -201,7 +201,10 @@ const Dashboard = () => {
     if (latestData.latest.v0 >= 60) {
       console.log("hello");
       fetch(
-        "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
+        "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text",
+        {
+          mode: "cors",
+        }
       )
         .then((res) => {
           return res.json();
