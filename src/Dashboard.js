@@ -6,6 +6,7 @@ import LineComponent from "./components/LineComponent";
 import Map from "./components/Map";
 import { data } from "./data/data";
 import CoverageComponent from "./components/CoverageComponent";
+import OneSignal from "react-onesignal";
 
 const Dashboard = () => {
   const [selectCoverage, setCoverage] = useState("latest");
@@ -197,16 +198,16 @@ const Dashboard = () => {
   }, [historyData]);
 
   useEffect(() => {
-    if (latestData.latest.v0 >= 20) {
-      console.log("hello");
-      // https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text
+    if (latestData.latest.v0 >= 10) {
       fetch(
         "https://iot-dasdboard-backend-manavsiddharthgupta.vercel.app/send-text"
       )
         .then((res) => {
-          console.log(res);
+          return res.json();
         })
-        .catch((err) => console.error(err));
+        .then((res) => {
+          console.log(res);
+        });
     }
   }, [latestData]);
 
